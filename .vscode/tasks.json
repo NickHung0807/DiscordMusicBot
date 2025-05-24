@@ -1,0 +1,22 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Copy appsettings.json",
+      "type": "shell",
+      "command": "copy appsettings.json bin\\Debug\\net8.0\\appsettings.json",
+      "problemMatcher": [],
+      "group": "build"
+    },
+    {
+      "label": "Build and Run",
+      "dependsOn": "Copy appsettings.json",
+      "type": "shell",
+      "command": "dotnet run",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}
